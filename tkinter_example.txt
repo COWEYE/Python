@@ -1,0 +1,10 @@
+from tkinter import *
+
+# 1. 루트화면 (root window) 생성
+tk = Tk() 
+# 2. 텍스트 표시
+label = Label(tk,text='Hello World!') 
+# 3. 레이블 배치 실행
+label.pack()
+# 4. 메인루프 실행
+tk.mainloop()
