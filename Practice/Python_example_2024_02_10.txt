@@ -1,0 +1,47 @@
+from tkinter import *
+
+root = Tk()  # create a root widget
+root.title("Tk Example")
+root.configure(background="yellow")
+root.minsize(200, 200)  # width, height
+root.maxsize(500, 500)
+root.geometry("300x300+50+50")  # width x height + x + y
+root.mainloop()
+
+--------------------------------------
+
+import tkinter as tk
+from PIL import Image, ImageTk
+
+def load_and_display_image():
+    # 이미지 파일 경로
+    image_path = r"C:\Users\user\Desktop\a.png"
+
+    # 이미지 열기
+    image = Image.open(image_path)
+
+    # 이미지 크기 조절 (원하는 크기로 조절)
+    resized_image = image.resize((300, 300), Image.LANCZOS)
+
+    # 이미지를 PhotoImage 객체로 변환
+    photo = ImageTk.PhotoImage(resized_image)
+
+    # Label에 이미지 설정
+    label.config(image=photo)
+    label.image = photo
+
+# 메인 윈도우 생성
+root = tk.Tk()
+root.title("Image Viewer")
+
+# Label 생성
+label = tk.Label(root)
+
+# 이미지 불러오기 및 표시
+load_and_display_image()
+
+# Label 배치
+label.pack(padx=10, pady=10)
+
+# Tkinter 이벤트 루프 시작
+root.mainloop()
