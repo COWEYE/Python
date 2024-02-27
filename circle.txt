@@ -1,0 +1,17 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Create a figure and axis
+fig, ax = plt.subplots()
+
+# Draw a circle
+circle = plt.Circle((0.5, 0.5), 0.4, edgecolor='b', facecolor='none')
+
+# Add the circle to the axis
+ax.add_patch(circle)
+
+# Set aspect ratio to be equal
+ax.set_aspect('equal', adjustable='box')
+
+# Display the plot
+plt.show()
