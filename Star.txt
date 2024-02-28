@@ -1,0 +1,20 @@
+import turtle
+
+# Create a turtle screen and set its background color
+screen = turtle.Screen()
+screen.bgcolor("white")
+
+# Create a turtle named "draw_turtle"
+draw_turtle = turtle.Turtle()
+
+# Function to draw a star
+def draw_star():
+    for _ in range(5):
+        draw_turtle.forward(100)  # Move the turtle forward by 100 units
+        draw_turtle.right(144)    # Turn the turtle right by 144 degrees
+
+# Call the draw_star function to draw a star
+draw_star()
+
+# Close the turtle graphics window when clicked
+screen.exitonclick()
