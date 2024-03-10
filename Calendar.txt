@@ -1,0 +1,19 @@
+import calendar
+
+def print_calendar(year, month):
+    cal = calendar.monthcalendar(year, month)
+
+    # 요일 헤더 출력
+    print("Mo Tu We Th Fr Sa Su")
+
+    # 각 주의 날짜 출력
+    for week in cal:
+        for day in week:
+            if day == 0:
+                print("   ", end=" ")  # 날짜가 0이면 공백 출력
+            else:
+                print(f"{day:2} ", end=" ")  # 날짜를 2자리로 정렬하여 출력
+        print()  # 한 주가 끝나면 줄바꿈
+
+# 예제: 2024년 3월 달력 출력
+print_calendar(2024, 3)
