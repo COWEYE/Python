@@ -1,0 +1,6 @@
+# 리스트 정의
+fruits = ["apple", "banana", "cherry"]
+
+# for 반복문
+for fruit in fruits:
+    print(f"I love {fruit}s!")
