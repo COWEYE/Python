@@ -1,0 +1,7 @@
+# 변수 초기화
+count = 0
+
+# while 반복문
+while count < 5:
+    print(f"Count: {count}")
+    count += 1
